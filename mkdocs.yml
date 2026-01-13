@@ -1,0 +1,70 @@
+site_name: "Jenkins Shared Library - Multiple GitHub Checkout"
+copyright: Copyright © 2026, David L. Armstrong.
+repo_url: https://github.com/daversomethingsomething/jenkins-multiple-github-checkout
+#site_url: 
+#edit_uri_template: 'edit/main/docs/{path}'
+docs_dir: docs/
+
+extra:
+  version:
+    provider: mike
+
+plugins:
+  - glightbox
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: null
+      version_selector: true
+      css_dir: css
+      javascript_dir: js
+#  - techdocs-core
+
+theme:
+  name: material
+  features:
+    - content.code.copy
+    - content.code.annotate
+    - navigation.footer
+
+extra_css:
+  - css/extra.css
+
+markdown_extensions:
+  - toc:
+      permalink: '#'
+      toc_depth: 3
+  - attr_list
+  - def_list
+  - tables
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.magiclink
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      linenums: false
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - callouts
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+watch:
+  - docs/
+  - src/
+
+nav:
+  - Introduction: 'index.md'
+  - 'Presentation.md'
+  - 'Groovy Docs': groovydoc/index.html
+#  - 'Unit Test Coverage Report': 'coverage/index.html'
+#  - 'Lint Report': 'lint.html'
+  - Apache License v2.0: 'LICENSE.txt'

@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: JenkinsMultipleGitHubCheckout
+  description: Jenkins Shared Library - Multiple GitHub Checkout
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  owner: user:default/daversomethingsomething
+  lifecycle: experimental

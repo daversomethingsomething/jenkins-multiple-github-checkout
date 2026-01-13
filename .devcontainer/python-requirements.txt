@@ -1,0 +1,9 @@
+virtualenv
+mkdocs-techdocs-core
+mkdocs-material
+mkdocs-glightbox
+mkdocs-awesome-pages-plugin
+mkdocs-minify-plugin
+markdown-callouts
+mkdocstrings[python]
+mike

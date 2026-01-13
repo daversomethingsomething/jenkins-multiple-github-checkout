@@ -1,0 +1,1 @@
+# Jenkins Shared Library - Multiple GitHub Checkout

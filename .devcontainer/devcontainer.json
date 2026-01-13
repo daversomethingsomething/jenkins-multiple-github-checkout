@@ -1,0 +1,16 @@
+// For format details, see https://aka.ms/devcontainer.json.
+{
+  "name": "Groovy and MkDocs",
+  "build": { "dockerfile": "Dockerfile" },
+
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "DavidAnson.vscode-markdownlint",
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}
