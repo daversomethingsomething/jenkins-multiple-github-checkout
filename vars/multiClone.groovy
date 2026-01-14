@@ -1,7 +1,5 @@
 #!/usr/bin/env groovy
 
-package org.DaverSomethingSomething
-
 /*
  * Copyright (c) 2026, David L. Armstrong
  *
@@ -9,6 +7,8 @@ package org.DaverSomethingSomething
  * For more details, see the full text of the license in the file LICENSE.txt.
  *
  */
+
+//package org.DaverSomethingSomething
 
 import java.nio.file.Path
 import java.nio.file.Paths
@@ -25,7 +25,7 @@ import java.nio.file.Paths
  * @return `true` on success, throws exception otherwise.
  *
  */
-def multiClone(Map params){
+def call(Map params){
 
     branchCheckout = null
     if(params.branch){
@@ -63,4 +63,4 @@ def multiClone(Map params){
     }
 }
 
-return this
+//return this
