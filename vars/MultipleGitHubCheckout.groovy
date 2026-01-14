@@ -1,5 +1,7 @@
 #!/usr/bin/env groovy
 
+package org.DaverSomethingSomething
+
 /*
  * Copyright (c) 2026, David L. Armstrong
  *
@@ -60,3 +62,5 @@ def multiClone(Map params){
         }
     }
 }
+
+return this

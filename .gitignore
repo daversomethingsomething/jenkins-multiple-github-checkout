@@ -1,5 +1,6 @@
 .gradle/
 build/
 site/
+docs/groovydoc
 *.swp
 .DS_Store
