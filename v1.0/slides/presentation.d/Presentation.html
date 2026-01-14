@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jenkins Multiple GitHub Checkout</title>
+    <title>Presentation</title>
     <!-- Add highlight.js for syntax highlighting -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -168,75 +168,23 @@
 </head>
 <body>
     <div class="slide-content">
-        <h1>Jenkins Multiple GitHub Checkout</h1>
+        <h1>Presentation</h1>
 <h2>Introduction</h2>
-<h2>Quick Start</h2>
-<h2>Installation with Jenkins</h2>
-<h2>Requirements</h2>
-<h2>Presentation</h2>
-<p>Presentation should be embedded into the documentation tree in the repo.  Easy</p>
-<p>Presentation is the deliverable!!!</p>
-<p>Present:
-- Project Requirements (flash-only to show where they are, no need to review)</p>
-<ul>
-<li>Working Jenkins instance</li>
-<li>privately hosted</li>
-<li>
-<p>jenkins.homelab CNAME</p>
-</li>
-<li>
-<p>Demo - Run the pipeline for my ConanToolchain project repos</p>
-</li>
-<li>
-<p>Dev environment - container, mkdocs</p>
-</li>
-<li>
-<p>my opinionated "productive" dev environment - simple, modular base with few frills loosely integrated</p>
-</li>
-<li>
-<p>source tree structure - standard grovy</p>
-</li>
-<li>
-<p>Versioned GitHub Pages (gh-pages branch, <code>mike</code> tool)</p>
-</li>
-<li>mkdocs and dev tools all pre-installed in DevContainer</li>
-<li>VS Code settings.json for groovy and groovydoc plugins</li>
-</ul>
-<h2>Documentation</h2>
-<h3>Project Requirements, Priorities, Acceptance Criteria</h3>
-<p>Why make the choices I did</p>
-<h4>Compromises</h4>
-<p>SCM Branching
-Only commit polling from Jenkins, no webhook from GitHub</p>
-<h3>Jenkins Configuration</h3>
-<ul>
-<li>https://www.jenkins.io/doc/book/installing/kubernetes/#setup-jenkins-on-kubernetes</li>
-</ul>
-<h2>Maintenance</h2>
-<h3>Directory Structure</h3>
-<h3>Build and Test</h3>
-<h3>Release</h3>
-<h3>Functional Spec</h3>
-<p>literally just a subroutine saved in the git repo and the git repo configured into Jenkins Shared Pipeline Libraries</p>
-<h3>Documentation Maintenance</h3>
-<h3>Dev environment Maintenance</h3>
-<p>.devcontainer
-- container, mkdocs</p>
-<h2>Challenges</h2>
-<h3>Groovy Docstrings into mkdocs</h3>
-<ul>
-<li>https://github.com/mkdocstrings/mkdocstrings/issues/99</li>
-<li>Closed as not planned</li>
-</ul>
-<p>groovydoc integration with mkdocs/techdocs</p>
-<ul>
-<li>https://groovy-lang.org/groovydoc.html</li>
-</ul>
-<p>Need a mkdocs handler for groovydoc docstrings
-- For now run groovydoc into static content subdir for mkdocs to link into
-- need a generateDocsRelease.sh script
-  - groovydoc --destdir ./docs/groovydoc/
-  - mike deploy v1.0 latest</p>
+<p>Jenkins Multiple GitHub Checkout</p>
+<h2>Jenkins Configuration</h2>
+<p>!!! quote annotate ""</p>
+<div class="codehilite"><pre><span></span><code><span class="o">!</span><span class="p">[</span><span class="n">Manage</span><span class="w"> </span><span class="n">Jenkins</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="kr">Global</span><span class="w"> </span><span class="n">Trusted</span><span class="w"> </span><span class="n">Pipeline</span><span class="w"> </span><span class="n">Libraries</span><span class="p">](</span><span class="n">img</span><span class="o">/</span><span class="n">JenkinsGlobalTrustedPipelineLibraries</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
+</code></pre>
+
+<p><img alt="Jenkins Pipeline Job Config" src="img/JenkinsPipelineJob.png" /></p>
+<div class="codehilite"><pre><span></span><code>slides {title=&quot;Presentation&quot; url_stub=&quot;PresentationSlides&quot; nav=&quot;presentation.d/*.md&quot;}
+</code></pre>
+
+<div class="codehilite"><pre><span></span><code><span class="n">title</span><span class="o">:</span><span class="w"> </span><span class="n">Presentation</span>
+<span class="n">url_stub</span><span class="o">:</span><span class="w"> </span><span class="n">PresentationSlides</span>
+<span class="n">nav</span><span class="o">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">presentation</span><span class="o">.</span><span class="na">d</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="na">md</span>
+</code></pre>
     </div>
 </body>
 </html> 
