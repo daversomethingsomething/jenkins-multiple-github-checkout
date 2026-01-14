@@ -56,10 +56,10 @@ def call(Map params){
         }
 
         dir(subdirectory) {
-            println "URL: ${repoUrl} Subdir: ${subdirectory}"
+            // println "URL: ${repoUrl} Subdir: ${subdirectory}"
             checkout scmGit(
                 branches: [[name: branchCheckout]],
-                extensions: extensionList,
+                extensions: extensionsList,
                 userRemoteConfigs: [[credentialsId: params.credentialsId,
                     url: repoUrl]]
             )
