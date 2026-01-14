@@ -32,7 +32,7 @@ def call(Map params){
         throw new Exception()
     }
 
-    String branchCheckout = null
+    String branchCheckout = "main"
     if(params.branch){
         branchCheckout = params.branch
     }
