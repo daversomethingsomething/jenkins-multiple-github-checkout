@@ -262,10 +262,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#original-requirements" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original Requirements
+        Requirements
       
     </span>
   </a>
@@ -294,6 +294,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devcontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevContainer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-and-groovydoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MkDocs and groovydoc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -317,33 +356,6 @@
     
   
     Groovy Docs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="Presentation.md" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    None
   
 
     
@@ -421,10 +433,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#original-requirements" class="md-nav__link">
+  <a href="#requirements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Original Requirements
+        Requirements
       
     </span>
   </a>
@@ -453,6 +465,45 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#devcontainer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DevContainer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-and-groovydoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MkDocs and groovydoc
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -478,13 +529,26 @@
 <p>Jenkins Multiple GitHub Checkout provides a Groovy Library for use in
 your Jenkins pipelines for cloning and checking out multiple Git
 repositories into your workspace.</p>
-<h2 id="original-requirements">Original Requirements<a class="headerlink" href="#original-requirements" title="Permanent link">#</a></h2>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h2>
+<ul>
+<li>Setup a jenkins instance</li>
+<li>Create a new github git repo holding a shared library.</li>
+<li>Use the shared library from a Jenkins pipeline with one stage</li>
+<li>The shared lib functionality: clone from GitHub</li>
+</ul>
+<p>Its arguments/capabilities:</p>
+<ul>
+<li>Clone from private repo using creds given by the Jenkins pipeline in a
+  secured way</li>
+<li>
+<p>Clone list of repos – list of URLs.</p>
+<p>Only in case of a list with more than 1 repo, place each one in a
+dedicated folder. In this case the folder name is the folder repo name.</p>
+</li>
+</ul>
 <h2 id="jenkins-configuration">Jenkins Configuration<a class="headerlink" href="#jenkins-configuration" title="Permanent link">#</a></h2>
 <div class="admonition quote annotate">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/JenkinsGlobalTrustedPipelineLibraries.png" data-desc-position="bottom"><img alt="Manage Jenkins -&gt; Global Trusted Pipeline Libraries" src="img/JenkinsGlobalTrustedPipelineLibraries.png"></a></p>
-</div>
-<div class="admonition quote annotate">
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/JenkinsPipelineJob.png" data-desc-position="bottom"><img alt="Jenkins Pipeline Job Config" src="img/JenkinsPipelineJob.png"></a></p>
 </div>
 <div class="admonition quote annotate">
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="img/JenkinsSSHCredential.png" data-desc-position="bottom"><img alt="Jenkins SSH Credential" src="img/JenkinsSSHCredential.png"></a></p>
@@ -516,6 +580,21 @@ repositories into your workspace.</p>
 </span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="o">}</span>
 </span></code></pre></div>
 </div>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h2>
+<h3 id="devcontainer">DevContainer<a class="headerlink" href="#devcontainer" title="Permanent link">#</a></h3>
+<p>An Ubuntu-based DevContainer configuration is provided loaded with <code>groovy</code>,
+<code>groovydoc</code>, and <code>mkdocs</code>.  The Docker file is in <code>.devcontainer/Dockerfile</code>.</p>
+<h3 id="mkdocs-and-groovydoc">MkDocs and groovydoc<a class="headerlink" href="#mkdocs-and-groovydoc" title="Permanent link">#</a></h3>
+<p>This Documentation site is generated using <a href="https://www.mkdocs.org/"><code>MkDocs</code></a>.</p>
+<p>MkDocs currently doesn't have any ability to publish Groovy docstrings
+directly, and it looks like there are no plans to provide such.</p>
+<ul>
+<li><a href="https://github.com/mkdocstrings/mkdocstrings/issues/99">https://github.com/mkdocstrings/mkdocstrings/issues/99</a> - <strong>Closed as not planned</strong></li>
+</ul>
+<p>For now I'm simply using <code>groovydoc</code> and sending the output into the MkDocs
+tree directly without formatting.</p>
+<p>The provided script <code>generateDocsRelease.sh</code> takes care of regenerating the
+<code>groovydoc</code> site under <code>docs/</code> prior to deploying the MkDocs site.</p>
 
 
 
