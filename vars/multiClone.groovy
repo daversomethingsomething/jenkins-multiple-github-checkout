@@ -27,11 +27,11 @@ import java.nio.file.Paths
  */
 def call(Map params){
 
-    branchCheckout = null
+    def branchCheckout = null
     if(params.branch){
         branchCheckout = params.branch
     }
-    extensionsList = []
+    def extensionsList = []
     if(params.lfs) {
         extensionsList.add(lfs())
     }
@@ -41,14 +41,13 @@ def call(Map params){
 
     for( repoUrl in params.repoUrls ) {
 
-        subdirectory = "." // default for a single repo
+        def subdirectory = "." // default for a single repo
 
         // If more than one repo, grab the last part of the URL path
         // for the subdirectory name.
         if(params.repoUrls.size() > 1) {
-            urlObj = repoUrl.toURL()
-            Path filePath = Paths.get(urlObj.getPath())
-            subdirectory = filePath.getFileName()
+            def urlObj = repoUrl.toURL()
+            subdirectory = getFilePath(urlObj.getPath())
         }
 
         dir(subdirectory) {
@@ -63,4 +62,8 @@ def call(Map params){
     }
 }
 
-return this
+@NonCPS
+def getFilePath(String fullPath){
+    Path filePath = Paths.get(fullPath)
+    return filePath.getFileName()
+}
