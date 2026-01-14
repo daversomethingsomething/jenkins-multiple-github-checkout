@@ -2,7 +2,7 @@
 
 # Build out any groovydoc docstrings available
 groovydoc -destdir ./docs/groovydoc \
-          -sourcepath src/ \
+          -classpath vars/multiClone.groovy \
           -verbose \
           -nomainforscripts \
           org.DaverSomethingSomething
