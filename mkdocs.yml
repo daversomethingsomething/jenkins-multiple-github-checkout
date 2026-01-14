@@ -59,12 +59,12 @@ markdown_extensions:
 
 watch:
   - docs/
-  - src/
+#  - src/
 
 nav:
   - Introduction: 'index.md'
-  - 'Presentation.md'
   - 'Groovy Docs': groovydoc/index.html
 #  - 'Unit Test Coverage Report': 'coverage/index.html'
 #  - 'Lint Report': 'lint.html'
+  - 'Presentation.md'
   - Apache License v2.0: 'LICENSE.txt'
