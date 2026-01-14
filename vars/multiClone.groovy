@@ -27,11 +27,17 @@ import java.nio.file.Paths
  */
 def call(Map params){
 
-    def branchCheckout = null
+    if(!params){
+        // called without params
+        throw new Exception()
+    }
+
+    String branchCheckout = null
     if(params.branch){
         branchCheckout = params.branch
     }
-    def extensionsList = []
+
+    List extensionsList = []
     if(params.lfs) {
         extensionsList.add(lfs())
     }
@@ -41,13 +47,12 @@ def call(Map params){
 
     for( repoUrl in params.repoUrls ) {
 
-        def subdirectory = "." // default for a single repo
+        String subdirectory = "." // default for a single repo
 
         // If more than one repo, grab the last part of the URL path
         // for the subdirectory name.
         if(params.repoUrls.size() > 1) {
-            def urlObj = repoUrl.toURL()
-            subdirectory = getFilePath(urlObj.getPath())
+            subdirectory = getSubdirPath(repoUrl)
         }
 
         dir(subdirectory) {
@@ -62,8 +67,9 @@ def call(Map params){
     }
 }
 
+// java.nio.file.Path is not Serializable
 @NonCPS
-def getFilePath(String fullPath){
+def getSubdirPath(String fullPath){
     Path filePath = Paths.get(fullPath)
-    return filePath.getFileName()
+    return filePath.getFileName().toString()
 }
